@@ -12,7 +12,11 @@
 export default {
   data() {
     return {
-      topics: [
+      activeTopic: null,
+    };
+  },
+  provide:{
+    topics: [
         {
           id: 'basics',
           title: 'The Basics',
@@ -29,8 +33,6 @@ export default {
             'With components, you can split logic (and markup) into separate building blocks and then combine those building blocks (and re-use them) to build powerful user interfaces.',
         },
       ],
-      activeTopic: null,
-    };
   },
   methods: {
     activateTopic(topicId) {
